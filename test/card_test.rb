@@ -17,4 +17,8 @@ class CardTest < Minitest::Test
     assert_equal "Spades", card.suit
   end
 
+  def test_a_card_renders_to_words
+    card = Card.new("Ace", "Spades")
+    assert_equal "Ace of Spades", card.in_words
+  end
 end
